@@ -1,0 +1,72 @@
+body{
+  background-image: url(http://etc-mysitemyway.s3.amazonaws.com/webtreats/assets/posts/776/full/grungy-vintage-dots-patterns-4.jpg);
+  background-repeat: repeat;
+  font-family: 'Balthazar', serif;
+  font-size: 1em;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  margin: 2%;
+}
+
+a:hover{
+  color: green;
+  text-decoration: underline;
+}
+
+.textblock{
+  width: 55%;
+  background-color: white;
+  opacity: .6;
+  margin: auto;
+  text-align: center;
+}
+
+#icons{
+  margin: auto;
+  width: 300px;
+  height: 75px;
+}
+
+#navbar{
+  position: fixed;
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  margin-left: -15%;
+  margin-top: -15%;
+  opacity: .75;
+  z-index: 1;
+}
+
+.title{
+  margin-top: 6%;
+  text-align: center;
+}
+
+.subtitle{
+  text-align: center;
+}
+
+#featuredpost{
+  padding: 15px;
+}
+
+.subheader{
+  display: inline-block;
+  width: 100%;
+}
+
+.post-title{
+  margin: 2%;
+  float: left;
+}
+
+.date{
+  margin: 2%;
+  float: right;
+}
