@@ -32,6 +32,16 @@ a:hover{
   height: 75px;
 }
 
+.icon{
+  height: 65px;
+  width: 65px;
+}
+
+#github{
+  height: 55px;
+  width: 55px;
+}
+
 #navbar{
   position: fixed;
   width: 30%;
