@@ -53,6 +53,63 @@ a:hover{
   z-index: 1;
 }
 
+#glasses{
+  position: fixed;
+  margin-top: -25px;
+  margin-left: -150px;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+}
+
+.kittens{
+  width:75%;
+  float: right;
+
+}
+
+.kittens img{
+  position: relative;
+  float: center;
+}
+
+.kittens img .1{
+  margin-top: 150px;
+  margin-left: 150px;
+  border: 5px solid black;
+}
+
+.1{
+  padding-left: 300px;
+}
+
+.pic{
+  margin-left: 330px;
+  border: 2px solid black;
+  width: 600px;
+  height: 500px;
+}
+
+ul li{
+  position: relative;
+  display: inline;
+}
+
+ul.dropdown{
+  display: none;
+}
+
+ul li:hover ul.dropdown{
+  display: inline-block;
+}
+
+ul.dropdown li{
+  display: block;
+  width: 100%;
+  float: right;
+}
+
 .title{
   margin-top: 6%;
   text-align: center;
