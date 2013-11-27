@@ -1,3 +1,6 @@
+/*Generic; sets the background image and fonts.
+Also sets links.*/
+
 body{
   background-image: url(http://etc-mysitemyway.s3.amazonaws.com/webtreats/assets/posts/776/full/grungy-vintage-dots-patterns-4.jpg);
   background-repeat: repeat;
@@ -26,6 +29,15 @@ a:hover{
   text-align: center;
 }
 
+.pic{
+  margin-left: 330px;
+  border: 2px solid black;
+  width: 600px;
+  height: 500px;
+}
+
+/*Icon bar (github, twitter, email)*/
+
 #icons{
   margin: auto;
   width: 300px;
@@ -42,6 +54,8 @@ a:hover{
   width: 55px;
 }
 
+/*The fixed nav bar that goes down each screen. This includes formatting of the dropdown menu.*/
+
 #navbar{
   position: fixed;
   width: 30%;
@@ -53,6 +67,58 @@ a:hover{
   z-index: 1;
 }
 
+ul li{
+  position: relative;
+  display: inline;
+}
+
+ul.dropdown{
+  display: none;
+}
+
+ul li:hover ul.dropdown{
+  display: inline-block;
+}
+
+ul.dropdown li{
+  display: block;
+  width: 100%;
+  float: right;
+}
+
+/*Formatting of the next section of the page: the title and subtitle*/
+
+.title{
+  margin-top: 6%;
+  text-align: center;
+}
+
+.subtitle{
+  text-align: center;
+}
+
+/*The 'featuredpost' is a post on the index page*/
+#featuredpost{
+  padding: 15px;
+}
+
+/*.subheader contains the post title and the date*/
+.subheader{
+  display: inline-block;
+  width: 100%;
+}
+
+.post-title{
+  margin: 2%;
+  float: left;
+}
+
+.date{
+  margin: 2%;
+  float: right;
+}
+
+/*The rest of the code on this page is for /dealwithit, which doesn't actually work yet.*/
 #glasses{
   position: fixed;
   margin-top: -25px;
@@ -78,58 +144,4 @@ a:hover{
   margin-top: 150px;
   margin-left: 150px;
   border: 5px solid black;
-}
-
-.pic{
-  margin-left: 330px;
-  border: 2px solid black;
-  width: 600px;
-  height: 500px;
-}
-
-ul li{
-  position: relative;
-  display: inline;
-}
-
-ul.dropdown{
-  display: none;
-}
-
-ul li:hover ul.dropdown{
-  display: inline-block;
-}
-
-ul.dropdown li{
-  display: block;
-  width: 100%;
-  float: right;
-}
-
-.title{
-  margin-top: 6%;
-  text-align: center;
-}
-
-.subtitle{
-  text-align: center;
-}
-
-#featuredpost{
-  padding: 15px;
-}
-
-.subheader{
-  display: inline-block;
-  width: 100%;
-}
-
-.post-title{
-  margin: 2%;
-  float: left;
-}
-
-.date{
-  margin: 2%;
-  float: right;
 }
