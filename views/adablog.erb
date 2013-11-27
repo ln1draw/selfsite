@@ -1,0 +1,15 @@
+    <div class='title'>
+      <h1>ADA BLOG</h1>
+    </div>
+
+    <vr/>
+
+    <div class='subtitle'>
+      <h2>Subtitle</h2>
+    </div>
+
+    <% @posts.each do |post| %>
+      <% post << '.erb' %>
+      <% post.insert(0, './views/posts/') %>
+      <%= File.read(post) %>
+    <% end%>
