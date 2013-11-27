@@ -10,7 +10,12 @@ class MyApp < Sinatra::Base
     erb :about
   end
 
+  get'/blog/:post_name' do 
+    erb "/posts/#{params[:post_name]}".to_sym
+  end
+
   get '/dealwithit' do
     erb :dealwithit
   end
+
 end

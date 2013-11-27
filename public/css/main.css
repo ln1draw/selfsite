@@ -36,6 +36,23 @@ a:hover{
   height: 500px;
 }
 
+.footer{
+  font-size: .75em;
+  width: 45%;
+  background-color: white;
+  opacity: .75;
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.footer a{
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: none;
+  color: green;
+}
+
 /*Icon bar (github, twitter, email)*/
 
 #icons{

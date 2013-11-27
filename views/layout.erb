@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='css/main.css' media='all' rel='stylesheet'>
+    <link href='/css/main.css' media='all' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Balthazar' rel='stylesheet' type='text/css'>
     <title>Ellen Wondra-Lindley</title>
   </head>
@@ -18,15 +18,10 @@
       <a href='/'>HOME</a> <a href='/about'>ABOUT</a> <a href='/ada-blog'>ADA-BLOG</a>
     </div>
 
-    <div class='title'>
-      <h1>Page name</h1>
-    </div>
+    <%= yield %>
+  </body>
 
-    <vr/>
-
-    <div class='subtitle'>
-      <h2>Subtitle</h2>
-    </div>
-  
-  </html>
-</body>
+  <div class='footer'>
+    Hey! <a href='mailto:shanghaiellen@gmail.com'>I</a> made this!
+  </div>
+</html>
