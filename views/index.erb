@@ -3,8 +3,7 @@
     </div>
 
     <div class='pic'>
-      <img src='http://placekitten.com/600/500' alt='A cute kitten sleeping!'>
-      <!--this image will probably be changed eventually -->
+      <img src='http://placekitten.com/600/500' alt='a cute kitten sleeping!'>
     </div>
   </div>
 
@@ -17,5 +16,8 @@
         <h3 class='post-title'><%= @sorted_posts.first[1]["title"] %></h3>
         <h3 class='date'><%= @sorted_posts.first[1]["date"] %></h3>
       </div>
+      <% name = @sorted_posts.first[0] %>
+      <%= erb("/posts/#{name}".to_sym, layout: false).split("\n\n", 2).last %>
+
 
     </div>

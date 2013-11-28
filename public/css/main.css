@@ -80,7 +80,7 @@ a:hover{
   top: 50%;
   left: 50%;
   margin-left: -17%;
-  margin-top: -15%;
+  margin-top: -14%;
   opacity: .75;
   z-index: 1;
   padding: auto;
@@ -135,6 +135,7 @@ ul.dropdown li{
 /*The 'featuredpost' is a post on the index page*/
 #featuredpost{
   padding: 15px;
+  opacity: .85;
 }
 
 /*.subheader contains the post title and the date*/
