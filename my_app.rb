@@ -4,6 +4,7 @@ require 'yaml'
 class MyApp < Sinatra::Base
   before do
     @posts = Dir.glob("views/posts/*.erb").map {|path| path.split("/").last.gsub(".erb", "") }
+    @sorted_posts = meta_data.sort_by {|post, data_hash| data_hash["date"]}.reverse
   end
 
   get '/' do 
@@ -33,8 +34,8 @@ class MyApp < Sinatra::Base
         meta = YAML.load(html.split("\n\n", 2).first)
         @meta_data[post] = meta
       end
+      @meta_data
     end
-    puts @meta_data.inspect
   end
 
   get '/ada-blog' do

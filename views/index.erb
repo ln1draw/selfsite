@@ -3,8 +3,10 @@
     </div>
 
     <div class='pic'>
-      <img src='http://placekitten.com/600/500'>
+      <img src='http://placekitten.com/600/500' alt='A cute kitten sleeping!'>
+      <!--this image will probably be changed eventually -->
     </div>
+  </div>
 
     <div class='subtitle'>
       <h2>Featured Post</h2>
@@ -12,8 +14,8 @@
   
     <div class='textblock' id='featuredpost'>
       <div class='subheader'>
-        <h3 class='post-title'>Post Name</h3>
-        <h3 class='date'>11.x.2013</h3>
+        <h3 class='post-title'><%= @sorted_posts.first[1]["title"] %></h3>
+        <h3 class='date'><%= @sorted_posts.first[1]["date"] %></h3>
       </div>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec rutrum dui. Sed quis erat sodales, interdum dui sit amet, pulvinar erat. Nulla at viverra justo. Suspendisse sed placerat dolor. Donec eget fermentum dui, nec luctus nunc. Phasellus sed turpis eu massa sagittis aliquet. Donec eget enim a augue pellentesque venenatis eget eu felis. Fusce sed nisi nisi. Donec sit amet tortor luctus turpis euismod accumsan. Fusce sed urna et sem consequat scelerisque sed sed tellus. Ut non est at felis fermentum porttitor. Quisque semper a ipsum ut convallis. Integer fringilla elit et mi egestas auctor quis non tellus. Proin luctus magna sed aliquet aliquam. Donec rhoncus quis neque nec lobortis. Nunc luctus purus id porta sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec euismod mattis est, ut imperdiet est vehicula sit amet. Quisque aliquet accumsan turpis in gravida. Suspendisse pretium vitae leo nec vulputate. Fusce faucibus in nisl nec accumsan. Integer eleifend turpis vel sapien pellentesque suscipit. Etiam quis aliquam massa. Praesent id mauris a tortor pharetra lobortis. Pellentesque et malesuada metus. Donec quam risus, eleifend ac lorem vel, mattis porta enim. Aliquam venenatis adipiscing libero nec elementum. Maecenas venenatis sed urna in mollis. Nullam euismod mattis lacinia. Vivamus orci velit, elementum a eleifend ut, sodales sit amet magna. Nullam id molestie felis, vel adipiscing sapien. Ut accumsan diam vel dui pretium laoreet. Nullam accumsan arcu ante, ac dignissim sem tristique lacinia. Nulla vel mattis dui. Integer mollis lorem nec risus aliquam, a dignissim quam tristique. Vestibulum malesuada dictum purus, quis pharetra arcu gravida at. Vivamus placerat eget nulla in volutpat. Praesent eget accumsan ante, vel facilisis eros. Sed consectetur, tortor in dignissim elementum, felis erat dignissim ligula, id aliquam arcu velit ac nunc. Quisque malesuada, elit at mollis semper, eros sapien luctus orci, vel scelerisque nulla ligula eu est. Morbi sit amet ligula eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed venenatis sapien, et porta ipsum. Duis eu quam vulputate, pellentesque magna ac, adipiscing diam. Sed sit amet metus ultrices, pellentesque velit tempus, cursus felis. Sed feugiat, dui a iaculis dictum, justo enim viverra quam, at malesuada quam nisi vel lorem. Nam vitae purus in nunc tempor pellentesque hendrerit ac mi. Aliquam libero risus, suscipit nec urna sit amet, auctor congue justo. U
+
     </div>

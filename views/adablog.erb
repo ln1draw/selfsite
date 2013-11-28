@@ -1,3 +1,9 @@
+    <ul class = 'sidebar'>
+      <% @sorted_posts.each do |post, date_array| %>
+        <li><a href="/blog/<%=post%>"><%=post %></a></li>
+      <%end%>
+    </ul>
+
     <div class='title'>
       <h1>ADA BLOG</h1>
     </div>

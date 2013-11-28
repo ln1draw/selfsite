@@ -8,17 +8,28 @@
 
 
   <body>
-    <div class='textblock' id='icons'>
-      <a href='https://github.com/shanghaiellen'><img class='icon' id='github' src='https://lh6.googleusercontent.com/-v8rHcDqSREw/UpUVjnKG2YI/AAAAAAAAAKA/3FTxB3DGUzE/s64-no/GitHub-Mark-64px.png' alt='link to Github'></a>
-      <a href='https://twitter.com/ln1draw'><img class='icon' id='twitter' src='http://www.iconsdb.com/icons/preview/black/twitter-2-xxl.png' alt='link to Twitter'></a>
-      <a href='mailto:shanghaiellen@gmail.com'><img class='icon' id='email' src="http://www.iconsdb.com/icons/download/black/email-12-512.png" alt="link to send email"></a>
-    </div>
+    <div class='topdata'> <!--added to get good percentages and relatives in the icons and nav bar-->
 
-    <div class='textblock' id='navbar'>
-      <a href='/'>HOME</a> <a href='/about'>ABOUT</a> <a href='/ada-blog'>ADA-BLOG</a>
-    </div>
+      <div class='textblock' id='icons'>
+        <a href='https://github.com/shanghaiellen'><img class='icon' id='github' src='https://lh6.googleusercontent.com/-v8rHcDqSREw/UpUVjnKG2YI/AAAAAAAAAKA/3FTxB3DGUzE/s64-no/GitHub-Mark-64px.png' alt='link to Github'></a>
+        <a href='https://twitter.com/ln1draw'><img class='icon' id='twitter' src='http://www.iconsdb.com/icons/preview/black/twitter-2-xxl.png' alt='link to Twitter'></a>
+        <a href='mailto:shanghaiellen@gmail.com'><img class='icon' id='email' src="http://www.iconsdb.com/icons/download/black/email-12-512.png" alt="link to send email"></a>
+      </div>
 
-    <%= yield %>
+      <ul class='textblock' id='navbar'>
+        <li><a href='/'>HOME</a></li> 
+        <li><a href='/about'>ABOUT</a></li>
+        <li class='dropdown-link'><a href='/ada-blog'>ADA-BLOG</a>
+          <ul class='dropdown'>
+            <li><a href='#byfirst'>starting with first</a></li>
+            <li><a href='#bylast'>starting with most recent</a></li>
+          </ul>
+        </li>
+      </ul>
+      <%= yield%>
+<!--     </div>
+
+    <%= yield %> -->
   </body>
 
   <div class='footer'>

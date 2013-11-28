@@ -30,7 +30,7 @@ a:hover{
 }
 
 .pic{
-  margin-left: 330px;
+  margin: auto;
   border: 2px solid black;
   width: 600px;
   height: 500px;
@@ -74,19 +74,23 @@ a:hover{
 /*The fixed nav bar that goes down each screen. This includes formatting of the dropdown menu.*/
 
 #navbar{
+  margin: auto;
   position: fixed;
   width: 30%;
   top: 50%;
   left: 50%;
-  margin-left: -15%;
+  margin-left: -17%;
   margin-top: -15%;
   opacity: .75;
   z-index: 1;
+  padding: auto;
 }
 
 ul li{
   position: relative;
   display: inline;
+  float: left;
+  width: 30%;
 }
 
 ul.dropdown{
@@ -101,6 +105,20 @@ ul.dropdown li{
   display: block;
   width: 100%;
   float: right;
+}
+
+/*formatting for the blog page*/
+
+.sidebar{
+  display: inline-block;
+  float: right;
+  background-color: white;
+  opacity: .7;
+  width: 30%;
+}
+
+.sidebar li{
+
 }
 
 /*Formatting of the next section of the page: the title and subtitle*/
