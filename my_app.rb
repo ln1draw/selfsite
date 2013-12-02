@@ -37,14 +37,18 @@ class MyApp < Sinatra::Base
     end
   end
 
-  get '/ada-blog' do
-      if params[:order] = byfirst
-        @recent = false
-      else
-        @recent = true
+  get '/byfirst' do
+    @recent = false
+    erb :adablog
+  end
 
-    end
-    puts @recent
+  get '/ada-blog' do
+    @recent = false
+    erb :adablog
+  end
+
+  get '/bylast' do
+    @recent = true
     erb :adablog
   end
 
