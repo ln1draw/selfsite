@@ -1,21 +1,36 @@
-    <ul class = 'sidebar'>
-      <% @sorted_posts.each do |post, date_array| %>
-        <li><a href="/blog/<%=post%>"><%=post %></a></li>
-      <%end%>
-    </ul>
+
 
     <div class='title'>
       <h1>ADA BLOG</h1>
     </div>
 
-    <vr/>
 
     <div class='subtitle'>
-      <h2>Subtitle</h2>
+      <h2></h2>
     </div>
 
-    <% @posts.each do |post| %>
+
+    <% if @recent %>
+      <% sorted = @sorted_posts%>
+      <% else%>
+      <% sorted = @sorted_posts.reverse%>
+    <% end %>
+
+
+
+    <% @posts.each_with_index do |post, index| %>
       <% post << '.erb' %>
       <% post.insert(0, './views/posts/') %>
-      <%= File.read(post) %>
-    <% end%>
+      <div class='textblock' id='post'>
+      <div class='subheader'>
+        <h3 class='post-title'><%= sorted[index][1]["title"] %></h3>
+        <h3 class='date'><%= sorted[index][1]["date"] %></h3>
+      </div>
+      <% name = sorted[index][0] %>
+      <div class='blogposts'>
+        <%= erb("/posts/#{name}".to_sym, layout: false).split("\n\n", 2).last %>
+      </div>
+    </div>
+  </div>
+
+  <% end%>

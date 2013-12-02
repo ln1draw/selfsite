@@ -1,0 +1,28 @@
+date: 2013-11-10
+title: WOO HOO. It's a new blog post!
+
+<p>Ada Week 2: The Weekening!<br><br>
+
+
+So, week 2 happened! We made it! I think that I really intended to use this blog post to talk about differences in learning in alarge group of ambitious women instead of in a mixed-gender setting. Instead, though, I'm going to talk about video games.<br><br>
+
+I like video games. They're pretty rad. I don't get as many opportunities to play them as I like, and as a result, I am way behind (I still haven't finished Mass Effect 2. Also, the highlight of my weekend was getting a chance to take another crack at Syphon Filter 2--what is it about sequels that gets me all messed up?). Anyway, I really enjoy video games, and I think about them a lot. I did a lot of close literature analysis in school (I actually enjoyed writing those papers) and whenever I finish a game, or a book, or a movie, I think a lot about what that media meant, and how it could be changed to be more interesting, meaningful, or accessible.<br><br>
+
+On one of our first days at Ada, we were tasked with making a simple dungeon game. The lesson was meant to be early exposure to objects, hashes, and user input-driven loops (the game kept playing until you quit; you didn't have to run the program over again, or type in things like player.move(:west), you could just type in "West." It was a very simple game, though--the dungeon was two rooms large, and you could move from one room to another. So of course, being myself, I said to myself "I can make this better," so I went home and spent three hours writing a terrible, convoluted adventure game starring my pets. It didn't even compile.<br><br>
+
+Honestly, I think creating that game was the best thing I could have done for myself in this class. That isn't because it's an amazing game, or because I got very much out of that first time writing the code down. It's because I learn through exploration, not repetition--not that there is a lot of mindless repetition at Ada. Far from it; most days, we have a lecture in the morning and then several hours of loosely structured project time to explore and incorporate the concepts that we learned earlier that day. Sometimes, however, we learn things that we don’t spend a lot of time exploring (or at least, we haven’t yet). Time is a good example. It’s important to know how Ruby understands and handles time, but this early in our schooling, we don’t have much cause to write code that uses the Time class. Text analysis is another good example; we don’t spend a lot of time write now analyzing blocks of text. We learned what some of our options were in each of these areas, and we wrote short programs that utilized them, but there isn’t as much call for creativity and originality in those lessons.<br><br>
+
+This is where my ego comes in. I learned a little python before I got into Ada, which really helped me the first week but which seemed to cripple me the second. It’s true that I am having an easier time than some students grasping some of these concepts, and part of that is because I had that prior experience (watch Ellen try to walk the line between self-deprecating and self-important here…). It’s also true that when all you have is a hammer, everything looks like a nail, and when you really like case/when statements and recursion, you try to use those things to solve all of your problems, sometimes when you don’t even realize it. I spent two hours that first Friday trying to use a do loop to identify non-numeric characters in a string, when my classmates solved it with a single line of code.<br><br>
+
+    if a_string == a_string.to_f.to_s<br>
+      # then it is a number, since a_letter.to_f.to_s returns 0<br><br>
+
+Having a regular project that I like and am invested in makes me look at every lesson differently. Instead of looking at methods as useful in specific situations, I think about how I could use them to improve my game. The lesson on text analysis didn’t stick in my head until I realized that I could use it to put blocks of text in my game in separate files that could easily be edited without disrupting my game. Time didn’t seem too useful until I thought about the potential to key events in the game based on time elapsed. I’m still thinking about Time; I wrote this block of code the other day that I hoped would kick you out of the game if you didn’t type your input in fast enough, and I’m still frustrated that it didn’t work and am trying to find a way to solve it.<br><br>
+
+    start_time = Time.now<br>
+    until Time.now - start_time > 10<br>
+      input = gets.chomp<br>
+      # foo potato etc. uzw.<br>
+    end<br><br>
+
+I understand why that code didn’t work..I think. I can think of a lot of ways to use loops and case statements to approximate the intent what I wrote; it would be trivial to end the game if too much time has elapsed once the user assigns input. But I don’t want to just use the tools I have to approximate the correct result. I want to do this the right way, so my game can be exactly as good as it is in my head. </p>

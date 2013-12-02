@@ -51,6 +51,7 @@ a:hover{
   font-size: 1.2em;
   padding: none;
   color: green;
+  margin: auto;
 }
 
 /*Icon bar (github, twitter, email)*/
@@ -77,7 +78,7 @@ a:hover{
   margin: auto;
   position: fixed;
   width: 30%;
-  top: 50%;
+  top: 45%;
   left: 50%;
   margin-left: -17%;
   margin-top: -14%;
@@ -103,8 +104,9 @@ ul li:hover ul.dropdown{
 
 ul.dropdown li{
   display: block;
-  width: 100%;
-  float: right;
+  width: 300px;
+  float: center;
+  left: -60%;
 }
 
 /*formatting for the blog page*/
@@ -117,9 +119,7 @@ ul.dropdown li{
   width: 30%;
 }
 
-.sidebar li{
 
-}
 
 /*Formatting of the next section of the page: the title and subtitle*/
 
@@ -152,6 +152,21 @@ ul.dropdown li{
 .date{
   margin: 2%;
   float: right;
+}
+
+
+/*for about page*/
+.aboutpic{
+  margin-left: 28%;
+}
+
+.blogposts{
+  margin: auto;
+}
+
+.blogposts p{
+  padding: 5%;
+  text-align: left;
 }
 
 /*The rest of the code on this page is for /dealwithit, which doesn't actually work yet.*/
