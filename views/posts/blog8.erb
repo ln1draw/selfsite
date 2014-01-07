@@ -1,0 +1,22 @@
+date: 2013-1-5
+title: Winter Break!
+
+<p>Well, winter break is almost over. It was both way too long and not nearly long enough.<br><br>
+
+  Unfortunately, I had a pretty tempestuous break and was not able to work nearly as much as I wanted to, and in some pretty unpredictable ways. The lessons from this break were:</p>
+  <ol>
+    <li>Comment your code</li>
+    <li>If you're too tired to write comments, you're too tired to write code.</li>
+  </ol>
+
+<p>As you'll recall, before break my mind was boggled by user authentication and the gem devise. It was far more boggled by both of those things in the Las Vegas airport. Our connecting flight back from Oklahoma was delayed by a few hours, and after deciding that I was too tired to read, I figured I was in a great position to write some code.<br><br>
+
+  I started intermittently getting bizarre errors like "No method 'authenticate' for (User object)" A lot of looking online showed many instances of "No method 'authenticate' for nil:Nilclass," but nothing when the app was able to successfully identifying the user.<br><br>
+
+  Initially, this bug was only a minor annoyance. I was able to write code for other pages on the site and Bookis helped me resolve the issue (we thought). The more code I wrote, however, the more clear it became that something was truly wrong with what I was doing. It looks like I wrote some sort of Frankenstein monster of authentication-with-devise and authentication-without-devise; neither method works correctly, and each throws up a plethora of errors due to conflicts with the other method. I don't remember what I wrote in the airport well enough to easily cut out the old authentication system, so I spent hours trying to rewrite the broken routes and patch together some code that works.<br><br>
+
+  The funny thing is, it still doesn't work. Of course it doesn't. Instead of removing the bad code I wrote, I tried to patch over it, and it still doesn't work. I spent so much time trying to cobble together a bandage for this serious problem in my code that I completely ran out of time.<br><br>
+
+  This has been one of the most frustrating experiences in coding I've ever had, but the clear takeaway is that quality matters. Quality is very important. Good code quality is more important than defending bad decisions. The biggest bug in the code didn't make itself apparent until Sunday, and then I spent six hours waiting for someone to be able to help me, and then after they did, a half-dozen more bugs cropped up as a result of that first bug fix. I could have just gotten rid of the bad code and written good code in less than a quarter of that time, but I panicked and I committed myself to something sub-par.<br><br>
+
+  I won't lie and say that I'm not disappointed by my break. I will say that I am excited to write better code again, though. </p>
