@@ -1,0 +1,15 @@
+date: 2014-1-26
+title: Single-Table Inheritance
+
+<p>This past week, we learned about single-table inheritance, which is noteworthy both because single-table inheritance is very useful and because it marries concepts we learned in our first few weeks to the more complex rails apps we're building today.<br><br>
+
+Single-table inheritance uses class inheritance in Ruby to save similar-but-different objects to the same database table and use the same database calls to run the correct version of each method on the correct object.<br><br>
+
+Imagine that you have an app that you use to track birds (I am not an ornithologist, so bear with me if this is a terrible example). You want to log each different bird you see and save them to your Birds database, and then log what they are doing at that time and some details about their actions, which you do with methods like .log_flight(height_in_feet, distance_in_feet) or .log_eating(food, amount).<br><br>
+
+For the most part, these methods will do the same thing; most birds fly in a similar enough manner for our purposes. But what happens if you go on a trip and see a penguin? Penguins don't fly at all. Their movement is completely different. You could write a new table to keep track of penguin movements with methods like .log_swim, but then you would also have to go back and copy down all of the other methods like .log_eating and .log_sleep, which isn't very DRY.<br><br>
+
+Fortunately, Ruby already knows how to solve this problem: by using inheritance. You can have a superclass, Birds, which has all of the standard methods common across most birds. If you rename that .log_flight method to .log_movement, then you can write a Penguins class that inherits from Birds (and thus inherits all of the methods Birds has, like .log_sleep and .log_eating) and define a special .log_movement method in Penguins that addresses the unique nature of penguin movement.<br><br>
+
+This process is made even easier with single-table inheritance. Remember that Birds table? Add a column "Type" to it. Type is a reserved word in Ruby; it signals a single-table inheritance relationship. Now, every time you add a bird to the database, put its type (like Penguin) in the Type column. Add models for those types to your app, with their own unique methods when necessary, but don't add database tables for them. Now, any time you call .log_movement on a Bird object, your app will look at the value in the Type column, check to see if .log_movement is defined in that type class, and then go up the chain to the super classes until it finds a class where that method is defined. This allows you to make penguins swim and all other birds fly by just adding a couple of lines of code, without a single if loop.
+</p>
