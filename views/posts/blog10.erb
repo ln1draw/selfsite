@@ -1,0 +1,30 @@
+date: 2014-1-26
+title: Ellen's Frequent Frustrations - SimpleCov
+
+<p>This is the first in a series of installments I’m calling Ellen’s Frequent Frustrations, wherein I describe errors that I experience very frequently and then tell you how to resolve them.<br><br>
+
+<h2>SimpleCov says I have 100% test coverage before I write a single test, and/or SimpleCov is covering the wrong files</h2><br>
+
+SimpleCov is a useful gem we use frequently at Ada to help quantify our code coverage. It’s a code coverage analysis tool for ruby, and you can get it on Github <a href=’https://github.com/colszowka/simplecov’>here</a>.<br><br>
+
+To use SimpleCov in your Rails project, first install rspec. Then, add <code>gem ‘simplecov’, require: false, group: test</code> to your Gemfile and bundle install. Add the following code to your <code>spec/spec_helper.rb</code> file:<br><br>
+    <code>require ‘simplecov’<br>
+    SimpleCov.start</code><br><br>
+Now, when you run rspec, at the bottom of the spec report you can see something that looks like this: <code>Coverage report generated for RSpec to /Users/Ellen/project_file_path/project_name/coverage. 103 / 116 LOC (88.79%) covered.</code> If you open that file in the browser, you get a detailed report of your spec coverage, including a line-by-line breakdown that shows you which lines of code your tests are touching and which they weren’t. It’s a very useful tool.<br><br>
+
+A few weeks ago, however, I was getting some really bizarre results. For some reason, I was getting 100% test coverage even before I wrote any specs. Additionally, instead of generating a report on my coverage of users.rb, user_controller.rb, post.rb, and post_controller.rb, it was only looking at users_spec.rb. Luckily, you can solve these problems in 3 steps.<br><br>
+
+<ol>
+  <li><strong>Move the <code>SimpleCov.start</code> line to the absolute top of <code>spec_helper.rb</code></strong>, right below where you require simplecov, and above where you declare the test environments. SimpleCov must be at the absolute top of the file. Put <code>require ‘simplecov’</code> on line 1 and put <code>SimpleCov.start</code> on line 2, and don’t put anything above them.</li><br>
+
+  <li><strong>Make sure that you have tests written.</strong> SimpleCov has a coverage default of 100% to any file that isn’t actually included in your test coverage. This makes a lot of sense for big projects; if you are just in charge of testing a Posts model, which is 25% of your code base, and you write tests that cover 80% of this Posts model but not anything else, getting a report that says you have 95% coverage tells you a lot more about how well you have covered Posts than a report that says you have 20% coverage. You are also able to get to a number close to 100%; you don’t have to determine what percentage of the program you are trying to test to see how well you have covered a certain section. So, if you want to know how well you have tested a file, the first step is to test it.<br><br>
+
+  This doesn’t just mean writing a file that says `describe Post do` on the top, either. You have to write an actual test that starts with `it ‘foo’ do` and runs some part of your code.</li><br>
+
+  <li><strong>Turn <code>SimpleCov.start</code> into a block and specify which code you do/do not want to test</strong>. SimpleCov has a number of customization options, the most useful of which is the ability to write filters and exclude certain files from your coverage report. It even has a standard filter available; if you write <code>SimpleCov.start ‘rails’</code> then SimpleCov will automatically filter out files typically not covered in testing on a rails app, like configs. You can specify which files you do or do not want to include by using groups (things you want to test) or filters (things you do not want to test), like so:<br><br>
+    <code>SimpleCov.start ‘rails’ do<br>
+        add_filter ‘/spec/’<br>
+        add_group ‘Models’, ‘app/models’<br>
+    end</code>
+  </li>
+</ol>
